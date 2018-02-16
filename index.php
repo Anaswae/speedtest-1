@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+<meta content='Speedtest Website Internet By Mexious Media' property='og:description' />
+<meta name="keywords" lang="en" content="speedtest indonesia, html5 speedtest,speed test for smartphone,HTML5 Broadband Speedtest,speed, test, speedtest, speed test, bandwidth speed test, internet speed test, broadband speed test, speakeasy, flash, cnet, internet, network, connection, broadband, bandwidth, latency, ping, throughput, download, upload, connection, dsl, adsl, cable, t1, voip, isp, asp, internet, ip, ip address, tcp, ds3" >
+<meta content='Home - Speedtest NextDev' property='og:site_name' />
+<meta content='305436826502614' property='fb:app_id' />
+<link href="https://4.bp.blogspot.com/-yme6PbCQLXg/WiMpETIZTuI/AAAAAAAABTI/ce8pBfQhgAYeb_iYrb-uzsZTaMLA5yXQgCLcBGAs/s1600/HiAppHere_com_com.uprui.launcher.marshmallow.png" rel="shortcut icon">
+<title>Home - Mexious Internet Speedtest</title>
+<!--- Jquery 2.1.3 --->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!--- Font Awesome 4.7.0 --->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4531534185877021",
+    enable_page_level_ads: true
+  });
+</script>
+
+<!--- Loader Style --->
+<style>
+@import url("https://fonts.googleapis.com/css?family=Cabin");
+#loading-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background:#f2f2f2;
+  z-index: 99999;
+}
+#loading-text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #0271d3;
+  width: 100px;
+  height: 30px;
+  margin: -8px 0 0 -50px;
+  text-align: center;
+  font-size: 25px;
+
+}
+#loading-content {
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -55px 0 0 -60px;
+  border: 3px solid #F00;
+}
+#loading-content {
+  border: 3px solid transparent;
+  border-top-color: #4C8BF4;
+  border-bottom-color: #4C8BF4;
+  border-radius: 50%;
+  -webkit-animation: loader 500ms linear infinite;
+  -moz-animation: loader 500ms linear infinite;
+  -o-animation: loader 500ms linear infinite;
+  animation: loader 500ms linear infinite;
+}
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+</style>
+
+<!--- Javascript Opacity --->
+<script>
+$(document).ready(function() {
+	function pulsate() {
+$("#loading-text").animate({ opacity: 0.2 }, 500, 'linear')
+ 	.animate({ opacity: 1 }, 500, 'linear', pulsate)
+	.click(function() {
+$(this).animate({ opacity: 1 }, 500, 'linear');
+$(this).stop();
+	});
+}
+pulsate();
+});
+</script>
+
+<!--- Javascript Preloader --->
+<script>
+	$(window).load(function () {
+            $('#loading-wrapper').delay(1000).fadeOut('slow');
+         });
+  </script>
+</head><body>
+	
+<!--- Run --->
+<div id="loading-wrapper">
+  <div id="loading-text"></div>
+  <div id="loading-content"></div>
+</div>
+
+
+<style type="text/css">
+	html,body{
+		border:none; padding:0; margin:0;
+		background:#f2f2f2;
+		color:#202020;
+	}
+	body{
+		text-align:center;
+		font-family:"Roboto",sans-serif;
+	}
+	h1{
+		color:#404040;
+	}
+	#startStopBtn{
+		display:inline-block;
+		margin:0 auto;
+		color:#ffffff;
+		background-color:#19a81b;
+		border:0.15em solid #19a81b;
+		border-radius:0.3em;
+		transition:all 0.3s;
+		box-sizing:border-box;
+		width:8em; height:3em;
+		line-height:2.7em;
+		cursor:pointer;
+		box-shadow: 0 0 0 rgba(0,0,0,0.1), inset 0 0 0 rgba(0,0,0,0.1);
+	}
+	#startStopBtn:hover{
+		box-shadow: 0 0 2em rgba(0,0,0,0.1), inset 0 0 1em rgba(0,0,0,0.1);
+	}
+	#startStopBtn.running{
+		background-color:#dd1313;
+		border-color:#aa0101;
+		color:#FFFFFF;
+	}
+	#startStopBtn:before{
+		content:"Start";
+	}
+	#startStopBtn.running:before{
+		content:"Abort";
+	}
+	#test{
+		margin-top:2em;
+		margin-bottom:12em;
+	}
+	div.testArea{
+		display:inline-block;
+		width:16em;
+		height:12.5em;
+		position:relative;
+		box-sizing:border-box;
+	}
+	div.testName{
+		position:absolute;
+		top:0.1em; left:0;
+		width:100%;
+		font-size:1.4em;
+		z-index:9;
+	}
+	div.meterText{
+		position:absolute;
+		bottom:1.55em; left:0;
+		width:100%;
+		font-size:2.5em;
+		z-index:9;
+	}
+	div.meterText:empty:before{
+		content:"0.00";
+	}
+	div.unit{
+		position:absolute;
+		bottom:2em; left:0;
+		width:100%;
+		z-index:9;
+	}
+	div.testArea canvas{
+		position:absolute;
+		top:0; left:0; width:100%; height:100%;
+		z-index:1;
+	}
+	div.testGroup{
+		display:inline-block;
+	}
+	@media all and (max-width:65em){
+		body{
+			font-size:1.5vw;
+		}
+	}
+	@media all and (max-width:40em){
+		body{
+			font-size:0.8em;
+		}
+		div.testGroup{
+			display:block;
+			margin: 0 auto;
+		}
+	}
+
+</style>
+<script type="text/javascript">
+function I(id){return document.getElementById(id);}
+var meterBk="#E0E0E0";
+var dlColor="#6060AA",
+	ulColor="#309030",
+	pingColor="#AA6060",
+	jitColor="#AA6060";
+var progColor="#EEEEEE";
+
+//CODE FOR GAUGES
+function drawMeter(c,amount,bk,fg,progress,prog){
+	var ctx=c.getContext("2d");
+	var dp=window.devicePixelRatio||1;
+	var cw=c.clientWidth*dp, ch=c.clientHeight*dp;
+	var sizScale=ch*0.0055;
+	if(c.width==cw&&c.height==ch){
+		ctx.clearRect(0,0,cw,ch);
+	}else{
+		c.width=cw;
+		c.height=ch;
+	}
+	ctx.beginPath();
+	ctx.strokeStyle=bk;
+	ctx.lineWidth=16*sizScale;
+	ctx.arc(c.width/2,c.height-58*sizScale,c.height/1.8-ctx.lineWidth,-Math.PI*1.1,Math.PI*0.1);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.strokeStyle=fg;
+	ctx.lineWidth=16*sizScale;
+	ctx.arc(c.width/2,c.height-58*sizScale,c.height/1.8-ctx.lineWidth,-Math.PI*1.1,amount*Math.PI*1.2-Math.PI*1.1);
+	ctx.stroke();
+	if(typeof progress !== "undefined"){
+		ctx.fillStyle=prog;
+		ctx.fillRect(c.width*0.3,c.height-16*sizScale,c.width*0.4*progress,4*sizScale);
+	}
+}
+function mbpsToAmount(s){
+	return 1-(1/(Math.pow(1.3,Math.sqrt(s))));
+}
+function msToAmount(s){
+	return 1-(1/(Math.pow(1.08,Math.sqrt(s))));
+}
+
+//SPEEDTEST AND UI CODE
+var w=null; //speedtest worker
+var data=null; //data from worker
+function startStop(){
+	if(w!=null){
+		//speedtest is running, abort
+		w.postMessage('abort');
+		w=null;
+		data=null;
+		I("startStopBtn").className="";
+		initUI();
+	}else{
+		//test is not running, begin
+		w=new Worker('speedtest_worker.min.js');
+		w.postMessage('start'); //Add optional parameters as a JSON object to this command
+		I("startStopBtn").className="running";
+		w.onmessage=function(e){
+			data=e.data.split(';');
+			var status=Number(data[0]);
+			if(status>=4){
+				//test completed
+				I("startStopBtn").className="";
+				w=null;
+				updateUI(true);
+			}
+		};
+	}
+}
+//this function reads the data sent back by the worker and updates the UI
+function updateUI(forced){
+	if(!forced&&(!data||!w)) return;
+	var status=Number(data[0]);
+	I("ip").textContent=data[4];
+	I("dlText").textContent=(status==1&&data[1]==0)?"...":data[1];
+	drawMeter(I("dlMeter"),mbpsToAmount(Number(data[1]*(status==1?oscillate():1))),meterBk,dlColor,Number(data[6]),progColor);
+	I("ulText").textContent=(status==3&&data[2]==0)?"...":data[2];
+	drawMeter(I("ulMeter"),mbpsToAmount(Number(data[2]*(status==3?oscillate():1))),meterBk,ulColor,Number(data[7]),progColor);
+	I("pingText").textContent=data[3];
+	drawMeter(I("pingMeter"),msToAmount(Number(data[3]*(status==2?oscillate():1))),meterBk,pingColor,Number(data[8]),progColor);
+	I("jitText").textContent=data[5];
+	drawMeter(I("jitMeter"),msToAmount(Number(data[5]*(status==2?oscillate():1))),meterBk,jitColor,Number(data[8]),progColor);
+}
+function oscillate(){
+	return 1+0.02*Math.sin(Date.now()/100);
+}
+//poll the status from the worker (this will call updateUI)
+setInterval(function(){
+	if(w) w.postMessage('status');
+},200);
+//update the UI every frame
+window.requestAnimationFrame=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.msRequestAnimationFrame||(function(callback,element){setTimeout(callback,1000/60);});
+function frame(){
+	requestAnimationFrame(frame);
+	updateUI();
+}
+frame(); //start frame loop
+//function to (re)initialize UI
+function initUI(){
+	drawMeter(I("dlMeter"),0,meterBk,dlColor,0);
+	drawMeter(I("ulMeter"),0,meterBk,ulColor,0);
+	drawMeter(I("pingMeter"),0,meterBk,pingColor,0);
+	drawMeter(I("jitMeter"),0,meterBk,jitColor,0);
+	I("dlText").textContent="";
+	I("ulText").textContent="";
+	I("pingText").textContent="";
+	I("jitText").textContent="";
+	I("ip").textContent="";
+}
+
+</script>
+</head>
+<body>
+    <br>
+        <br>
+            <br>
+<img src="https://1.bp.blogspot.com/-3pC7kj3ebyI/WcnwBZwstMI/AAAAAAAAA28/fTaCZUm2aEcLS05eJyo8Q-avL2AlN4wlACK4BGAYYCw/s1600/new_logo%2Boriginal-1.png" width="300" title="Powered By Mexious Media"></img>
+<br>
+    <br>
+        <br>
+<div id="startStopBtn" onclick="startStop()"></div>
+<div id="test">
+    <div class="testGroup">
+		<div class="testArea">
+			<div class="testName">Ping</div>
+			<canvas id="pingMeter" class="meter"></canvas>
+			<div id="pingText" class="meterText"></div>
+			<div class="unit">ms</div>
+		</div>
+	<div class="testGroup">
+		<div class="testArea">
+			<div class="testName">Download</div>
+			<canvas id="dlMeter" class="meter"></canvas>
+			<div id="dlText" class="meterText"></div>
+			<div class="unit">Mbps</div>
+		</div>
+		<div class="testArea">
+			<div class="testName">Upload</div>
+			<canvas id="ulMeter" class="meter"></canvas>
+			<div id="ulText" class="meterText"></div>
+			<div class="unit">Mbps</div>
+		</div>
+	</div>
+
+	<!--	<div class="testArea">
+			<div class="testName">Jitter</div>
+			<canvas id="jitMeter" class="meter"></canvas>
+			<div id="jitText" class="meterText"></div>
+			<div class="unit">ms</div>
+		</div>-->
+	</div>
+	<div id="ipArea">
+		IP Address: <span id="ip"></span>
+	</div>
+<br>
+<br>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- responsif -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-2318407186225553"
+data-ad-slot="5201992232"
+data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<br>
+<p>This Server is Located in <b>USA, Arizona, Phoenix</b></p>
+<p> <!--<img src="https://4.bp.blogspot.com/-yme6PbCQLXg/WiMpETIZTuI/AAAAAAAABTI/ce8pBfQhgAYeb_iYrb-uzsZTaMLA5yXQgCLcBGAs/s1600/HiAppHere_com_com.uprui.launcher.marshmallow.png" width="20" title="Trademark Logo Of Mexious Media">--> Copyright &#169; 2018 <a href="/"><font color="black">Mexious Internet Speedtest</a></font></a></p></div>
+<script type="text/javascript">setTimeout(initUI,100);</script>
+</body>
+</html>
